@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Leave Popup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+    </div>
+    <div id="modalBox">
+        <img src="images/banner.png" alt="" width="100%">
+        <div class="offer-text">
+            <h2>Get 15% OFF</h2>
+            <small>on all beauty products</small>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum maiores atque delectus soluta doloribus, rem consequatur nostrum excepturi laudantium, quam quos minus nemo iste. Consequatur ad quisquam consequuntur exercitationem ducimus?</p>
+            <form>
+                <input type="email" placeholder="Email Address">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <img src="images/close.png" class="close-icon" onclick="closeModal()">
+    </div>
+    <script>
+        let modalBox = document.getElementById("modalBox")
+        document.onmouseleave = function(){
+            modalBox.style.display = "block"
+        }
+        let close = document.getElementsByClassName("close-icon")
+        
+       function closeModal(){
+            modalBox.style.display = "none"
+        }
+    </script>
+</body>
+</html>
